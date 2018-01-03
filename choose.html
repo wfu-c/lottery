@@ -70,7 +70,8 @@
 				</p>
 			</div>
 			<div class="order-price-box">
-				
+				<span class="price">{{}}</span>
+				<span>{{ "1注" + period_count + "期" + bet_count + "倍"}}</span>
 			</div>
 		</div>
 	</div>
@@ -182,6 +183,7 @@
 					console.log(this.choosed);
 					this.is_show1 = 0;
 					this.is_show2 = 1;
+					this.calculPrice();
 				},
 				calcul (a,b) {
 					// 单注购买时，以及复式购买时分别对应的价格
@@ -213,6 +215,13 @@
 						}
 					} else {};
 				},
+				calculPrice () {
+					var total = 0;
+					for(var k in this.choosed) {
+						total += this.choosed[k].price;
+					}
+					console.log(total)
+				},
 				factorial (a, b) {
 					var c = 1;
 					if(b) {
@@ -238,10 +247,12 @@
 						var choose_blue = this.upset(12).slice(0,2);
 					} else {};
 					this.choosed.push({choose_red,choose_blue,"price": 2.88,"type": TYPE,"count": 1})
+					this.calculPrice();
 				},
 				deleteOrder (a) {
 					console.log(a);
 					this.choosed.splice(index,1);
+					this.calculPrice();
 				},
 				clear (a) {
 					[].forEach.call(document.querySelectorAll(".choose-box > li"),function(ev){
