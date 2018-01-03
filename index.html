@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8" />
+	<title>我的彩站</title>
+	<meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="baidu-site-verification" content="QIQ6KC1oZ6" />
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<link rel="stylesheet" type="text/css" href="./css/swiper-3.4.2.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a><img class="fullwidth" src="img/banner.png" /></a>
+				</div>
+				<div class="swiper-slide">
+					<a><img class="fullwidth" src="img/banner.png" /></a>
+				</div>
+				<div class="swiper-slide">
+					<a><img class="fullwidth" src="img/banner.png" /></a>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<div class="index-box">
+			<div><a href="javascript:;"><img class="fullwidth" src="img/banner2.png" alt="" /></a></div>
+			<div class="tab-box">
+				<div>
+					<a href="./choose.html?type=2"><img class="fullwidth" src="img/icon-letou.png" alt="" /></a>
+					<a href="./choose.html?type=1"><img class="fullwidth" src="img/icon-shuangse.png" alt="" /></a>
+				</div>
+				<div>
+					<a href=""><img class="fullwidth" src="img/icon-record.png" alt="" /></a>
+					<a href=""><img class="fullwidth" src="img/icon-center.png" alt="" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<script src="./js/swiper-3.4.2.jquery.min.js"></script>
+	<script>
+		var mySwiper = new Swiper ('.swiper-container', {
+			loop: true,
+			autoplayDisableOnInteraction : false,
+			pagination: '.swiper-pagination',
+			autoplay:5000,
+		})
+	</script>
+</body>
+</html>

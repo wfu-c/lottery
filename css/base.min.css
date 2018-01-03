@@ -1,0 +1,13 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,menu,nav,output,ruby,section,summary,time,mark,audio,video,input{margin:0;padding:0;border:0;font-size:100%;font-weight:normal;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}
+table{border-collapse:collapse;border-spacing:0}a{color:#7e8c8d;text-decoration:none;-webkit-backface-visibility:hidden}li{list-style:none}::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track-piece{background-color:rgba(0,0,0,0.2);-webkit-border-radius:6px}::-webkit-scrollbar-thumb:vertical{height:5px;background-color:rgba(125,125,125,0.7);-webkit-border-radius:6px}
+::-webkit-scrollbar-thumb:horizontal{width:5px;background-color:rgba(125,125,125,0.7);-webkit-border-radius:6px}html,body{width:100%}body{-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.fullwidth{display:block;width:100%}.float-right{float:right}.color-red{color:red}.color-blue{color:blue}.index-box>ul>li{display:inline-block;width:36%;padding:5%}
+.index-box>.tab-box>div{border-bottom:1px solid #aaa}.index-box>.tab-box>div>a{display:inline-block;width:38%;padding:5%}.index-box>.tab-box>div>a:first-child{border-right:1px solid #aaa}
+.index-box>.tab-box>div>a>img{display:block;width:100%}.choose-title p{text-align:center;padding:10px 0}.choose-container{border-top:1px solid #aaa;border-bottom:1px solid #aaa;padding:10px;margin-bottom:30px}
+.choose-container h4{margin:10px 0}.choose-box{display:block}.choose-box>li p{width:100%}.no-select{display:inline-flex;align-items:center;text-align:center;width:10vw;height:10vw;border:1px solid #aaa;border-radius:50%;margin:1vw}
+.selected{border:1px solid transparent}.red .no-select{color:red}.blue .no-select{color:blue}.red .selected{color:#fff;background-color:red}.blue .selected{color:#fff;background-color:blue}
+.btn-box{padding:10px}.btn-border{display:inline-block;padding:10px 30px;border:1px solid #aaa;border-radius:5px}.btn-ok{display:inline-block;padding:10px 30px;background-color:red;border-radius:5px;color:#fff}
+.order-contain>div{display:inline-flex}.order-contain>div .close{text-align:center;border:1px solid #aaa;border-radius:50%;width:6vw;height:6vw;line-height:6vw}
+. .order-contain>div .order-img{width:10vw}
