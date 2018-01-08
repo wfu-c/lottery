@@ -57,23 +57,29 @@
 			</div>
 			<div class="bet-box" v-if="choosed.length > 0">
 				<p>追 
-					<span v-if="period_count > 1" class="react-border" @click="period_count--">－</span>
+					<span v-if="period_count > 1" class="react-border" @click="period_count--;index.calculPrice()">－</span>
 					<span v-else class="no-click react-border">－</span>
 					<span class="count-box">{{ period_count }}</span>
-					<span class="react-border" @click="period_count++">＋</span> 期
+					<span class="react-border" @click="period_count++;index.calculPrice()">＋</span> 期
 				</p>
 				<p class="float-right">投 
-					<span v-if="bet_count > 1" class="react-border" @click="bet_count--">－</span>
+					<span v-if="bet_count > 1" class="react-border" @click="bet_count--;index.calculPrice()">－</span>
 					<span v-else class="no-click react-border">－</span>
 					<span class="count-box">{{ bet_count }}</span>
-					<span class="react-border" @click="bet_count++">＋</span> 倍
+					<span class="react-border" @click="bet_count++;index.calculPrice()">＋</span> 倍
 				</p>
 			</div>
 			<div class="order-price-box">
-				<span class="price">{{}}</span>
+				<span class="price">{{ price }} <small>元</small></span>
 				<span>{{ "1注" + period_count + "期" + bet_count + "倍"}}</span>
-				<span>支付</span>
+				<span class="btn" @click="is_show2=0;is_show3=1;">支付</span>
 			</div>
+		</div>
+		<div class="page3" v-show="is_show3">
+			<!-- <div class="close">X</div> -->
+			<h2>￥<span>{{ price }}</span></h2>
+			<p class="surplus">账户余额：<b>999</b><span class="btn">充值</span></p>
+			<p class="btn">确认支付</p>
 		</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -90,9 +96,11 @@
 				choosed: [],
 				is_show1: 1,
 				is_show2: 0,
+				is_show3: 0,
 				type:"",
 				period_count: 1,
-				bet_count: 1
+				bet_count: 1,
+				price:""
 			},
 			methods: {
 				whileTime (a, b) {
@@ -130,7 +138,7 @@
 							document.querySelector(".red > li:nth-child(" + red_arr[i] + ")").classList.add("selected");
 						}
 						for(var j = 0; j < 2; j++) {
-							document.querySelector(".blue > li:nth-child(" + blue_arr[i] + ")").classList.add("selected");
+							document.querySelector(".blue > li:nth-child(" + blue_arr[j] + ")").classList.add("selected");
 						}
 					} else if (TYPE == UnionLotto) {
 						var red_arr = this.upset(33);
@@ -221,7 +229,9 @@
 					for(var k in this.choosed) {
 						total += this.choosed[k].price;
 					}
-					console.log(total)
+					total = total * this.period_count * this.bet_count;
+					console.log(total);
+					this.price = total;
 				},
 				factorial (a, b) {
 					var c = 1;

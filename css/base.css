@@ -303,3 +303,79 @@ body {
     border: 1px solid #aaa;
 }
 
+.page2 .fixed {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+}
+
+.page2 .order-price-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw;
+    border-top: 1px solid #aaa;
+}
+
+.page2 .order-price-box > span {
+    line-height: 30px;
+}
+
+.page2 .order-price-box > .price {
+    font-size: 30px;
+    color: red;
+}
+
+.page2 .order-price-box > .price small {
+    font-size: 14px;
+    color: #000;
+}
+
+.page2 .order-price-box > span.btn {
+    padding: 2px 4vw;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
+}
+
+.page3 {
+    text-align: center;
+    margin-top: 30vh;
+}
+
+.page3 > h2 {
+    font-size: 36px;
+}
+
+.page3 > h2 > span {
+    font-size: 60px;
+}
+
+.page3 > p.surplus {
+    margin: 6vh 0;
+}
+
+.page3 > p > b {
+    margin:0 3vw;
+    color: red;
+}
+
+.page3 > p > span.btn {
+    padding: 1vw 3vw;
+    border: 1px solid #3195d8;
+    border-radius: 5px;
+    color: #3195d8;
+}
+
+.page3 > p.btn {
+    padding: 2vh 0;
+    font-size: 22px;
+    width: 60%;
+    margin: auto;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
+}
+
