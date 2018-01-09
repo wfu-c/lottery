@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8" />
+	<title>购彩记录</title>
+	<meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="baidu-site-verification" content="QIQ6KC1oZ6" />
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+</head>
+<body>
+	<div id="record" class="container">
+		<div class="record-content" v-for="item in record">
+            <h5>{{ "第" + item.period + "期" }}</h5>
+            <div class="record-box">
+                <div class="record-img">
+                    <img class="fullwidth" v-if="item.type == 2" src="./img/icon-letou.png" alt="">
+                    <img class="fullwidth" v-else src="./img/icon-shuangse.png" alt="">
+                </div>
+                <div class="record-info">
+                    <p>
+                        <span class="color-red">{{ item.choose_red.join(' ') }}</span>
+                        <span class="color-blue">{{ item.choose_blue.join(' ') }}</span>
+                    </p>
+                    <p>
+                        <span v-if="item.count == 1">单式</span>
+                        <span v-else>复式</span>
+                        <span class="order-info-price">{{ item.count + "注" }}</span>
+                    </p>
+                </div>
+                <div class="record-result">
+                    <b v-if="item.result == 0">出票中</b>
+                    <b v-else-if="item.result == 1">等待开奖</b>
+                    <b v-else-if="item.result == 2">未中奖</b>
+                    <b v-else-if="item.result == 3">中奖 {{ item.award + "元" }} <small>未发奖</small> </b>
+                    <b v-else-if="item.result == 4">中奖 {{ item.award + "元" }} <small>已发奖</small> </b>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        var RED = 1, BLUE = 2, SuperEnalotto = 2, UnionLotto = 1;//SuperEnalotto 大乐透	UnionLotto 双色球
+		
+		var index = new Vue({
+			el: '#record',
+			data: {
+				record: [
+                    {period:17005,choose_blue:[7,9],choose_red:[0,11,7,5,3],count:1,price:2.88,type:2,result:0,award:0},
+                    {period:17006,choose_blue:[1,12],choose_red:[0,16,26,5,19],count:1,price:2.88,type:2,result:3,award:5},
+                ],
+			},
+			methods: {}
+        })
+    </script>
+</body>
+</html>

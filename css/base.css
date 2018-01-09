@@ -379,5 +379,24 @@ body {
     color: #fff;
 }
 
+.record-box {
+    display: flex;
+    align-items: center;
+    padding: 2vw;
+    margin: 2vw 0;
+}
+
+.record-box .record-img {
+    width: 12%;
+}
+
+.record-box .record-info {
+    width: 50%;
+    margin: 0 8%;
+}
+
+.record-box .record-info p:first-child {
+    margin-bottom: 10px;
+}
 
 
