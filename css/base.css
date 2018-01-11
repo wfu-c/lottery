@@ -379,6 +379,32 @@ body {
     color: #fff;
 }
 
+.record-content {
+    margin: 6vw;
+    border-bottom: 1px dashed #aaa;
+}
+
+.record-content .record-box {
+    margin-left: -4vw;
+}
+
+.record-content .record-box .record-info {
+    width: 54vw;
+    margin: 0 6%;
+}
+
+.record-content .record-box .record-result {
+    margin-right: -3vw;
+    font-size: 20px;
+}
+
+.record-content .record-box .record-result small {
+    float: right;
+    margin-top: 1.5vh;
+    font-size: 16px;
+    color: #000;
+}
+
 .record-box {
     display: flex;
     align-items: center;
@@ -387,7 +413,7 @@ body {
 }
 
 .record-box .record-img {
-    width: 12%;
+    width: 14%;
 }
 
 .record-box .record-info {
@@ -397,6 +423,21 @@ body {
 
 .record-box .record-info p:first-child {
     margin-bottom: 10px;
+}
+
+#record > p {
+    text-align: center;
+}
+
+#record .btn.again {
+    display: inline-block;
+    padding: 2vh 0;
+    font-size: 22px;
+    width: 60%;
+    margin: 7vh auto 1vh;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
 }
 
 

@@ -34,11 +34,12 @@
                     <b v-if="item.result == 0">出票中</b>
                     <b v-else-if="item.result == 1">等待开奖</b>
                     <b v-else-if="item.result == 2">未中奖</b>
-                    <b v-else-if="item.result == 3">中奖 {{ item.award + "元" }} <small>未发奖</small> </b>
-                    <b v-else-if="item.result == 4">中奖 {{ item.award + "元" }} <small>已发奖</small> </b>
+                    <b class="color-red" v-else-if="item.result == 3">中奖 {{ item.award + "元" }} <br/><small>未发奖</small> </b>
+                    <b v-else-if="item.result == 4">中奖 {{ item.award + "元" }} <br/><small>已发奖</small> </b>
                 </div>
             </div>
         </div>
+        <p><a href="./choose.html" class="btn again">再来一注</a></p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script>
