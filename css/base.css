@@ -33,6 +33,10 @@ body {
     line-height: 1;
 }
 
+html,body {
+    height: 100%;
+}
+
 blockquote, q {
     quotes: none;
 }
@@ -45,6 +49,16 @@ q:before, q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+.float-right {
+    float: right;
+    display: inline-block;
+}
+
+.widthfull {
+    display: block;
+    width: 100%;
 }
 
 /* custom */
@@ -440,4 +454,89 @@ body {
     color: #fff;
 }
 
+.my {
+    height: 100%;
+    background-color: #e8e8e8;
+}
 
+.my header {
+    padding: 20px 10%;
+    background-color: red;
+    color: #fff;
+    overflow: hidden;
+}
+
+.my header > div {
+    float:left;
+}
+
+.my .btn-box {
+    padding: 18px 11%;
+}
+
+.my .btn-box .btn {
+    display: inline-block;
+    padding: 10px 8%;
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 10%;
+    color: red;
+}
+
+.my .btn-box .btn:first-child {
+    margin-right: 45%;
+}
+
+.my header > div.protrait {
+    width: 30%;
+    border-radius: 50%;
+    overflow: hidden;
+    vertical-align: text-bottom;
+    margin-right: 20px;
+}
+
+.my header > div > h3 {
+    margin: 20px 0;
+}
+
+.my ul {
+    background-color: #fff;
+}
+
+.my ul:last-child {
+    margin-top: 20px;
+} 
+
+.my .flex-inline {
+    display: flex;
+    align-items: center;    
+    width: 98%;
+    padding: 5px 0 5px 2%;
+}
+
+.my .flex-inline div {
+    width: 6%;
+    margin-right: 2%;
+}
+
+.my .flex-inline p {
+    width: 90%;
+    border-bottom: 1px solid #aaa;
+    padding: 10px 2% 10px 2%;
+}
+
+.my ul > li:last-child > .flex-inline p {
+    border-bottom: none;
+}
+
+.recharge > h3 {
+    font-size: 20px;
+    padding-left: 10px;
+    border-bottom: 1px solid #aaa;
+}
+
+.recharge > ul > li {
+    font-size: 22px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
