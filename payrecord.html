@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8" />
+	<title>资金明细</title>
+	<meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="baidu-site-verification" content="QIQ6KC1oZ6" />
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+</head>
+<body>
+	<div class="container payrecord">
+		<header>
+			<small>账户余额</small>
+			<span>￥</span>
+			<b>99999999.99</b>
+		</header>
+		<ul class="tab">
+			<li class="income"><p>收入</p></li>
+			<li class="expend"><p>支出</p></li>
+		</ul>
+		<div class="payrecord-box">
+			<div class="income-box selected">
+				<ul class="record-list">
+					<li>
+						<div>
+							<h5>充值</h5>
+							<span>2017-12-25 17:23</span>
+						</div>
+						<b>+500</b>
+					</li>
+					<li>
+						<div>
+							<h5>奖金</h5>
+							<span>2017-12-25 17:23</span>
+						</div>
+						<b>+500</b>
+					</li>
+				</ul>
+			</div>
+			<div class="expend-box">
+				<ul class="record-list">
+					<li>
+						<div>
+							<h5>购买</h5>
+							<span>2017-12-25 17:23</span>
+						</div>
+						<b>+500</b>
+					</li>
+					<li>
+						<div>
+							<h5>购买</h5>
+							<span>2017-12-25 17:23</span>
+						</div>
+						<b>+500</b>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script>
+		var li = document.querySelectorAll(".tab > li");
+		[].forEach.call(li,function(ev){
+			ev.addEventListener('click',function(e){
+				[].forEach.call(document.querySelectorAll(".tab > li"),function(e){
+					e.classList.remove("selected");
+				});
+				[].forEach.call(document.querySelectorAll(".payrecord-box > div"),function(e){
+					e.classList.remove("selected");
+				});
+				document.querySelector('.' + this.getAttribute("class") + "-box").classList.add("selected");
+				this.classList.add("selected");
+			})
+		})
+	</script>
+</body>
+</html>

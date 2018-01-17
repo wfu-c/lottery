@@ -14,18 +14,22 @@
 	<div class="container recharge">
 		<h3>请选择充值金额</h3>
 		<ul class="recharge-box">
-			<li>20</li>
-			<li>50</li>
-			<li>100</li>
-			<li>300</li>
-			<li>1000</li>
+			<li><p>20</p></li>
+			<li><p>50</p></li>
+			<li><p>100</p></li>
+			<li><p>300</p></li>
+			<li><p>500</p></li>
+			<li><p>1000</p></li>
 		</ul>
-		<p><span class="btn">确认充值</span></p>
+		<p class="btn-box center"><span class="btn red">确认充值</span></p>
 	</div>
 	<script>
 		var li = document.querySelectorAll(".recharge-box > li");
 		[].forEach.call(li,function(ev){
 			ev.addEventListener('click',function(e){
+				[].forEach.call(document.querySelectorAll(".recharge-box > li"),function(e){
+					e.classList.remove("selected");
+				})
 				this.classList.add("selected");
 			})
 		})

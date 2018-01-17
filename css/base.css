@@ -531,12 +531,107 @@ body {
 
 .recharge > h3 {
     font-size: 20px;
-    padding-left: 10px;
+    padding: 10px;
     border-bottom: 1px solid #aaa;
 }
 
+.recharge > ul {
+    width: 90%;
+    margin: auto;
+}
+
 .recharge > ul > li {
-    font-size: 22px;
+    display: inline-block;
+    font-size: 26px;
+    padding: 10px 5px;
+    text-align: center;
+    width: 25%;
+    margin-top: 20px;
     border: 1px solid #aaa;
     border-radius: 5px;
+}
+
+.recharge > ul > li.selected {
+    background-color: red;
+    color: #fff;
+    border-color:#fff;
+}
+
+.recharge > ul > li:nth-child(3n-1) {
+    margin: 0 6%;
+}
+
+.btn-box.center {
+    text-align: center;
+}
+
+.btn-box .btn.red {
+    display: inline-block;
+    padding: 14px 8%;
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 24%;
+    color: red;
+}
+
+.recharge .btn-box .btn {
+    margin-top: 20vh;
+    background-color: red;
+    color: #fff;
+}
+
+.payrecord > header {
+    padding: 30px 8%;
+    background-color: red;
+    color: #fff;
+}
+
+.payrecord > header b {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.payrecord > .tab {
+    border-bottom: 1px solid #aaa;
+}
+
+.payrecord > .tab > li {
+    display: inline-block;
+    text-align: center;
+    width: 48%;
+    padding: 10px 0;
+}
+
+.payrecord > .tab > li:first-child {
+    border-right: 1px solid #aaa;
+}
+
+.payrecord > .payrecord-box > div {
+    display: none;
+}
+
+.payrecord > .payrecord-box > div.selected {
+    display: block;
+}
+
+.payrecord .record-list > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 2% 2px;
+    padding: 0 1% 5px;
+    border-bottom: 1px solid #aaa;
+}
+
+.payrecord .record-list > li h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.payrecord .record-list > li span {
+    font-size: 14px;
+}
+
+.payrecord .record-list > li b {
+    font-size: 26px;
 }
