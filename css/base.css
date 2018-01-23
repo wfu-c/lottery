@@ -574,6 +574,16 @@ body {
     color: red;
 }
 
+.btn-box .btn.full-red {
+    display: inline-block;
+    padding: 14px 8%;
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 24%;
+    color: #fff;
+    background-color: red;
+}
+
 .recharge .btn-box .btn {
     margin-top: 20vh;
     background-color: red;
@@ -634,4 +644,78 @@ body {
 
 .payrecord .record-list > li b {
     font-size: 26px;
+}
+
+.pay-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.pay-box > div:first-child {
+    width: 30%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.pay-box > div > input {
+    border:1px solid #D0D0D0;
+    width: 80%;
+    height: 24px;
+    font-size: 14px;
+}
+.pay-box > div > input:first-child {
+    margin-bottom: 5px;
+}
+
+.withdrawal > header {
+    margin-top: 30px;
+}
+
+.withdrawal > header > p {
+    width: 66%;
+    margin: 10px auto;
+}
+
+.withdrawal > header > p > span {
+    display:inline-block;
+    width: 25%;
+}
+
+.withdrawal > header > p select {
+    width: 50%;
+    text-align: center;
+    height:30px;
+}
+
+.withdrawal > header > p input {
+    height: 30px;
+}
+
+.withdrawal-container {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.withdrawal-container > div {
+    margin: 20px 0;
+    padding: 0 10px 20px;
+    border-bottom: 1px solid #aaa;
+}
+
+.withdrawal-container > div > b {
+    font-size: 40px;
+}
+
+.withdrawal-container > div > input {
+    height: 40px;
+    border:1px solid #c2c2c2;
+    vertical-align: bottom;
+    padding-left: 5px;
+}
+
+.withdrawal-container .btn-box {
+    margin-top: 8vh;
 }

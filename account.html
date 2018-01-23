@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>绑定奖金账户</title>
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="baidu-site-verification" content="QIQ6KC1oZ6" />
+    <link rel="stylesheet" type="text/css" href="./css/base.css">
+</head>
+<body>
+<div class="container account">
+    <div class="pay-box">
+        <div>
+            <img class="widthfull" src="./img/wechatpay.png" alt="">
+            <p>微信</p>
+        </div>
+        <div>
+            <input type="text" placeholder="微信名">
+            <input type="text" placeholder="微信号">
+        </div>
+    </div>
+    <div class="pay-box">
+        <div>
+            <img class="widthfull" src="./img/alipay.png" alt="">
+            <p>支付宝</p>
+        </div><div>
+            <input type="text" placeholder="账户名">
+            <input type="text" placeholder="账户号">
+        </div>
+    </div>
+    <div class="pay-box">
+        <div>
+            <img class="widthfull" src="./img/unionpay.png" alt="">
+            <p>银行卡</p>
+        </div><div>
+            <input type="text" placeholder="开户名">
+            <input type="text" placeholder="卡号">
+        </div>
+    </div>
+    <p class="btn-box center"><span class="btn full-red">完成</span></p>
+</div>
+<script>
+    var li = document.querySelectorAll(".recharge-box > li");
+    [].forEach.call(li,function(ev){
+        ev.addEventListener('click',function(e){
+            [].forEach.call(document.querySelectorAll(".recharge-box > li"),function(e){
+                e.classList.remove("selected");
+            })
+            this.classList.add("selected");
+        })
+    })
+</script>
+</body>
+</html>
