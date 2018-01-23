@@ -479,12 +479,12 @@ body {
     padding: 10px 8%;
     border: 1px solid red;
     border-radius: 5px;
-    width: 10%;
+    width: 11%;
     color: red;
 }
 
 .my .btn-box .btn:first-child {
-    margin-right: 45%;
+    margin-right: 43%;
 }
 
 .my header > div.protrait {
@@ -741,6 +741,7 @@ body {
 .share-box > div {
     display: inline-block;
     width: 40%;
+    font-size: 14px;
 }
 
 .share-box > div:first-child {
